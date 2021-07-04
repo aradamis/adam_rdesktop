@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/rdesktop
+FROM ghcr.io/linuxserver/rdesktop:mate-focal
 
 ARG PROGS="filezilla file less"
 RUN apt-get update && \
