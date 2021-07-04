@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+    rdesktop:
+        ports:
+            - "3389:3389"
+        restart: always
+        build: ./build
+        container_name: rdesktop
+        environment:
+            - PUID=1000
+            - GUID=1000
+            - TZ=America/New_York
+        volumes:
+            - type: bind
+              source: /data
+              target: /data
+            - type: bind
+              source: ./home
+              target: /home
